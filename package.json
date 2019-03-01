@@ -1,13 +1,17 @@
 {
   "name": "starter-bootstrap-4-gulp-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bootstrap 4 Gulp 4 starter",
   "main": "index.js",
   "scripts": {
     "start": "gulp bootstrap && gulp watch",
     "build": "gulp build"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Calexxxxx/bootstrap-4-gulp-4-starter-theme.git"
+  },
+  "keywords": ["bootstrap4", "gulp4", "gulp-sass", "browser-sync", "gulp-babel", "gulp-autoprefixer"],
   "author": "Pascal Meers",
   "license": "ISC",
   "devDependencies": {
