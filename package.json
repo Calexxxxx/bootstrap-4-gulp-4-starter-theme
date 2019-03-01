@@ -8,7 +8,7 @@
     "build": "gulp build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Pascal Meers",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.3.4",
