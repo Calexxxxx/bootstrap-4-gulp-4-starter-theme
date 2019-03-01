@@ -1,0 +1,35 @@
+$bg-color: #438bf7;
+$bg-color-secondary: #9143f7;
+
+$jumbotron-bg: rgba(255, 255, 255, .9);
+$body-bg: linear-gradient(to right bottom, rgba($bg-color, .9), rgba($bg-color-secondary, .9));
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background: $body-bg;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.jumbotron {
+    min-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
