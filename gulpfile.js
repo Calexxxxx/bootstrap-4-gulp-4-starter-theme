@@ -40,19 +40,6 @@ function scss() {
 		.pipe(browserSync.stream()); // sync stream on all browsers
 }
 
-function js() {
-	return gulp
-		.src(`${devFolder}/js/**/*.js`)
-		.pipe(sourcemap.init())
-		.pipe(
-			babel({
-				presets: ['@babel/env']
-			})
-		)
-		.pipe(gulp.dest(`${devFolder}/js`)) // put js files into js folder
-		.pipe(browserSync.stream()); // sync stream on all browsers
-}
-
 function watchFiles() {
 	browserSync.init({
 		server: {
@@ -62,7 +49,7 @@ function watchFiles() {
 
 	gulp.watch(`${devFolder}/scss/**/*.scss`, scss); // watch scss folder for changes and run the scss function
 	gulp.watch(`${devFolder}/**/*.html`).on('change', browserSync.reload); // watch html files for changes
-	gulp.watch(`${devFolder}/js/*.js`, js); // watch js folder for changes and run the js function
+	gulp.watch(`${devFolder}/js/*.js`).on('change', browserSync.reload); // watch js folder for changes and run the js function
 }
 
 // GULP PRODUCTION
